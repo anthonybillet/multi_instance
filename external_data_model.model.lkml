@@ -1,6 +1,7 @@
 connection: "argolis"
 
 include: "/views/**/*.view.lkml"
+include: "/dashboards/**.dashboard.lookml"
 
 label: "3) Data Security Demo"
 

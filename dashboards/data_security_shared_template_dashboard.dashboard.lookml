@@ -1,5 +1,5 @@
 ---
-- dashboard: analytics
+- dashboard: data_security_shared_template_dashboard
   title: 'Data Security: Shared Template Dashboard'
   layout: newspaper
   preferred_viewer: dashboards-next
