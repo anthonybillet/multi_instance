@@ -9,7 +9,7 @@
   elements:
   - title: Daily Sales
     name: Daily Sales
-    model: external_date_model
+    model: external_data_model
     explore: order_items
     type: looker_line
     fields: [order_items.total_sale_price, order_items.created_date]
@@ -53,7 +53,7 @@
     height: 7
   - title: Sales by Category
     name: Sales by Category
-    model: external_date_model
+    model: external_data_model
     explore: order_items
     type: looker_pie
     fields: [order_items.total_sale_price, products.category]
@@ -105,7 +105,7 @@
     height: 5
   - title: Top Products
     name: Top Products
-    model: external_date_model
+    model: external_data_model
     explore: order_items
     type: looker_grid
     fields: [order_items.total_sale_price, order_items.order_count, products.name]
@@ -179,7 +179,7 @@
     height: 7
   - title: Total Sales
     name: Total Sales
-    model: external_date_model
+    model: external_data_model
     explore: order_items
     type: single_value
     fields: [order_items.total_sale_price]
@@ -240,7 +240,7 @@
     height: 2
   - title: Top Users
     name: Top Users
-    model: external_date_model
+    model: external_data_model
     explore: order_items
     type: looker_grid
     fields: [order_items.total_sale_price, order_items.order_count, users.id, users.name,
@@ -314,7 +314,7 @@
     height: 7
   - title: Order Detail Table
     name: Order Detail Table
-    model: external_date_model
+    model: external_data_model
     explore: order_items
     type: looker_grid
     fields: [order_items.id, order_items.status, order_items.created_date, order_items.sale_price,
@@ -363,7 +363,7 @@
       type: relative_timeframes
       display: inline
       options: []
-    model: external_date_model
+    model: external_data_model
     explore: order_items
     listens_to_filters: []
     field: order_items.created_date
@@ -376,7 +376,7 @@
     ui_config:
       type: dropdown_menu
       display: inline
-    model: external_date_model
+    model: external_data_model
     explore: order_items
     listens_to_filters: []
     field: products.brand
