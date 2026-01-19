@@ -49,6 +49,13 @@ explore: order_items {
     relationship: many_to_one
     sql_on: ${products.id} = ${inventory_items.product_id} ;;
   }
+
+  join: users_sensitive_data {
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${users_sensitive_data.id} = ${users.id} ;;
+  }
+
 }
 
 test: historic_revenue_is_accurate {

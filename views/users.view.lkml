@@ -233,7 +233,7 @@ view: +users {
   }
 
   set: detail {
-    fields: [id, name, email, age, created_date, order_items.order_count, order_items.count]
+    fields: [id, name, email, age, created_date, users_sensitive_data.household_income, order_items.order_count, order_items.count]
   }
 
 }
