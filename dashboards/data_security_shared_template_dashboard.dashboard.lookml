@@ -5,7 +5,7 @@
   preferred_viewer: dashboards-next
   crossfilter_enabled: true
   description: ''
-  preferred_slug: EU9MxVoyJiidBm9oCxVVhR
+  preferred_slug: dmvwX7CaIpAbqhZTOXZhcc
   elements:
   - title: Daily Sales
     name: Daily Sales
@@ -243,8 +243,8 @@
     model: external_data_model
     explore: order_items
     type: looker_grid
-    fields: [order_items.total_sale_price, order_items.order_count, users.id, users.name,
-      users.ssn_last_4, users.email, users.city]
+    fields: [order_items.total_sale_price, order_items.order_count, users.id, users.ssn_last_4,
+      users.city, users_sensitive_data.household_income]
     filters:
       order_items.created_date: 365 days
       products.brand: ''
@@ -260,7 +260,7 @@
     size_to_fit: true
     table_theme: transparent
     limit_displayed_rows: false
-    enable_conditional_formatting: false
+    enable_conditional_formatting: true
     header_text_alignment: left
     header_font_size: '12'
     rows_font_size: '12'
@@ -278,6 +278,10 @@
         is_active: true
       order_items.total_gross_margin:
         is_active: true
+    conditional_formatting: [{type: along a scale..., value: !!null '', background_color: "#4285F4",
+        font_color: !!null '', color_application: {collection_id: google, palette_id: google-sequential-0,
+          options: {steps: 5, mirror: false, reverse: false, stepped: false}}, bold: false,
+        italic: false, strikethrough: false, fields: [users_sensitive_data.household_income]}]
     hidden_pivots: {}
     x_axis_gridlines: false
     y_axis_gridlines: true
