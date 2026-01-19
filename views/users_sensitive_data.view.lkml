@@ -2,6 +2,7 @@ view: users_sensitive_data {
   sql_table_name: `ant-billet-looker-core-argolis.thelook_ecomm.users_sensitive_info_dummy` ;;
 
   dimension: id {
+    primary_key: yes
     hidden: yes
     type: number
     sql: ${TABLE}.id ;;
