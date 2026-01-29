@@ -6,7 +6,6 @@ access_grant: can_see_sensitive_data {
 }
 
 
-#this is the explore
 explore: order_items {
   label: "Orders, Items and Users (Data Security)"
   view_name: order_items
